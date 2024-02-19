@@ -1,13 +1,11 @@
 # FullStackDev_javascript.info
 Full-stack developer course.
 
-
 //------------------ EN
 
 I am learning JavaScript on my own using the javascript.info textbook (https://javascript.info/). I didn't immediately add my progress to the GitHub repository, so you can only see part of it. However, this is the main part and, naturally, more complex than at the beginning.
 
 I studied things like:
-
 
 //------------------ RU
 
