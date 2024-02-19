@@ -1,24 +1,24 @@
-let ladder = {
-    step: 0,
-    up() {
-        this.step++;
-        return this;
-    },
-    down() {
-        this.step--;
-        return this;
-    },
-    showStep: function() { // показывает текущую ступеньку
-        console.log( this.step );
-        return this;
+function Calculator() {
+    this.calculate = function(str) {
+        this.a = str.slice(0, str.indexOf(' '));
+        this.operator = str.slice(str.indexOf(' ') + 1, str.lastIndexOf(' '));
+        this.b = str.slice(str.lastIndexOf(' ') + 1);
+
+        switch (this.operator) {
+            case '+':
+                res = parseFloat(this.a) + parseFloat(this.b);
+                break;
+            case '-':
+                res = parseFloat(this.a) - parseFloat(this.b);
+                break;
+            default:
+                res = "There is no such action."
+                break;
+            }
+            
+        return res;
     }
-};
+}
 
-ladder.up();
-ladder.up();
-ladder.down();
-ladder.showStep(); // 1
-ladder.down();
-ladder.showStep(); // 0
-
-ladder.up().up().down().showStep().down().showStep(); // показывает 1 затем 0
+let calc = new Calculator;
+console.log( calc.calculate("3 + 7") ); // 10
