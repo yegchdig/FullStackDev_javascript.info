@@ -3,34 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create an extendable calculator</title>
+    <title>Map to objects</title>
 </head>
     <body>
-        <p>Создайте функцию конструктор Calculator, которая создаёт «расширяемые» объекты калькулятора.</p>
-        <p>Задание состоит из двух частей.</p>
-        <p>1.</p>
-        <p>Во-первых, реализуйте метод calculate(str), который принимает строку типа "1 + 2" в формате «ЧИСЛО оператор ЧИСЛО» (разделено пробелами) и возвращает результат. Метод должен понимать плюс + и минус -.</p>
-        <p>Пример использования:</p>
+        <!-- <p>You have an array of user objects, each one has name, surname and id.</p>
+        <p>Write the code to create another array from it, of objects with id and fullName, where fullName is generated from name and surname.</p>
+        <p>For instance:</p>
             <pre>
-                let calc = new Calculator;
-    
-                alert( calc.calculate("3 + 7") ); // 10
+                let john = { name: "John", surname: "Smith", id: 1 };
+                let pete = { name: "Pete", surname: "Hunt", id: 2 };
+                let mary = { name: "Mary", surname: "Key", id: 3 };
+                
+                let users = [ john, pete, mary ];
+                
+                let usersMapped = /* ... your code ... */
+                
+                /*
+                usersMapped = [
+                  { fullName: "John Smith", id: 1 },
+                  { fullName: "Pete Hunt", id: 2 },
+                  { fullName: "Mary Key", id: 3 }
+                ]
+                */
+                
+                alert( usersMapped[0].id ) // 1
+                alert( usersMapped[0].fullName ) // John Smith
             </pre>
-        <p>2.</p>
-        <p>Затем добавьте метод addMethod(name, func), который добавляет в калькулятор новые операции. Он принимает оператор name и функцию с двумя аргументами func(a,b), которая описывает его.</p>
-        <p>Например, давайте добавим умножение *, деление / и возведение в степень **:</p>
+        <p>So, actually you need to map one array of objects to another. Try using =&gt; here. There’s a small catch.</p> -->
+
+
+        
+        <p>У вас есть массив объектов user, и у каждого из объектов есть name, surname и id.</p>
+        <p>Напишите код, который создаст ещё один массив объектов с параметрами id и fullName, где fullName – состоит из name и surname.</p>
+        <p>Например:</p>
             <pre>
-                let powerCalc = new Calculator;
-                powerCalc.addMethod("*", (a, b) =&gt; a * b);
-                powerCalc.addMethod("/", (a, b) =&gt; a / b);
-                powerCalc.addMethod("**", (a, b) =&gt; a ** b);
-    
-                let result = powerCalc.calculate("2 ** 3");
-                alert( result ); // 8
+                let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
+                let petya = { name: "Петя", surname: "Иванов", id: 2 };
+                let masha = { name: "Маша", surname: "Петрова", id: 3 };
+
+                let users = [ vasya, petya, masha ];
+
+                let usersMapped = /* ... ваш код ... */
+
+                /*
+                usersMapped = [
+                { fullName: "Вася Пупкин", id: 1 },
+                { fullName: "Петя Иванов", id: 2 },
+                { fullName: "Маша Петрова", id: 3 }
+                ]
+                */
+
+                alert( usersMapped[0].id ) // 1
+                alert( usersMapped[0].fullName ) // Вася Пупкин
             </pre>
-        <p>Для этой задачи не нужны скобки или сложные выражения.</p>
-        <p>Числа и оператор разделены ровно одним пробелом.</p>
-        <p>Не лишним будет добавить обработку ошибок.</p>
+        <p>Итак, на самом деле вам нужно трансформировать один массив объектов в другой. Попробуйте использовать =&gt;. Это небольшая уловка.</p>
 
         <script src="script.js"></script>
     </body>
