@@ -1,7 +1,14 @@
 function unique(arr) {
-  /* your code */
+    let arrNew = [];
+
+    for (const item of arr) {
+        if (!arrNew.includes(item)) {
+            arrNew.push(item);
+        }
+    };
+    return arrNew;
 }
 
 let strings = ["Hare", "Krishna", "Hare", "Krishna", "Krishna", "Krishna", "Hare", "Hare", ":-O"];
 
-alert( unique(strings) ); // Hare, Krishna, :-O
+console.log(unique(strings)); // Hare, Krishna, :-O
