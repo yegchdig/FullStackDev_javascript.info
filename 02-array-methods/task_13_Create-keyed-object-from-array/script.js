@@ -76,7 +76,6 @@ function groupById(users) {
 }
 
 let usersById = groupById(users);
-
 /*
   // после вызова у нас должно получиться:
 
